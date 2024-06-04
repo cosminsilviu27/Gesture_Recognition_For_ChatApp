@@ -1,0 +1,54 @@
+Configurarea și rularea proiectului - Tehnologiile folosite sunt Django si ReactJS
+
+1. Partea de recunoaștere a gesturilor:
+
+Crearea mediului virtual:
+python -m venv venv_gesture
+
+Activarea mediului virtual:
+
+Windows: venv_gesture\Scripts\activate
+macOS/Linux: source venv_gesture/bin/activate
+
+Instalarea dependențelor:
+pip install -r requirements.txt
+
+Antrenarea modelului
+python Pregatire_Model.py
+
+Recunoasterea Gesturilor
+python Recunoastere_Gesturi.py
+
+Această comandă va porni aplicația de recunoaștere a gesturilor, care va începe să captureze video de la camera web și să trimită gesturile recunoscute către backend-ul Django.
+
+2. Aplicația ChatApp (Django și React.js):
+
+Navigarea către directorul backend-ului:
+
+
+cd backend
+
+Crearea mediului virtual:
+python -m venv venv_backend
+
+Activarea mediului virtual:
+Windows: venv_backend\Scripts\activate
+macOS/Linux: source venv_backend/bin/activate
+
+Instalarea dependențelor:
+pip install -r requirements.txt
+
+Migrarea bazei de date:
+python manage.py migrate
+
+Rularea serverului Django:
+python manage.py runserver
+
+Navigarea către directorul frontend-ului:
+cd ../frontend
+
+Instalarea dependențelor:
+npm install
+
+Rularea aplicației React:
+npm start
